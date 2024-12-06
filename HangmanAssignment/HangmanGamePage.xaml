@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HangmanAssignment.HangmanGamePage"
+             Title="Hangman Game">
+
+    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+
+        <!-- Title Label -->
+        <Label Text="Welcome to Hangman!"
+               HorizontalTextAlignment="Center"
+               FontSize="32"
+               FontAttributes="Bold"/>
+
+        <!-- Hangman Image -->
+        <Image x:Name="HangmanImage"
+               Source="hang1.png" 
+                HorizontalOptions="Center"/>
+
+            <!-- Masked Word (C_RR_EN__) -->
+            <Label x:Name="MaskedWordLabel"
+               FontSize="28"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               Text="______"/>
+
+            <!-- Remaining Lives -->
+            <Label x:Name="RemainingLivesLabel"
+               FontSize="20"
+               HorizontalTextAlignment="Center"
+               Text="Lives Remaining: 8"/>
+
+            <!-- User Input for Guess -->
+            <Entry x:Name="GuessEntry"
+               Placeholder="Enter a letter"
+               FontSize="24"
+               HorizontalOptions="Center"/>
+
+            <!-- Guess Button -->
+            <Button x:Name="GuessButton"
+                Text="Guess"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Clicked="OnGuessButtonClicked"/>
+
+            <!-- Result Label (Win/Lose message) -->
+            <Label x:Name="ResultLabel"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               TextColor="Green"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
+
